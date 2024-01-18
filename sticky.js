@@ -6,7 +6,7 @@ let userdata=[
     {id:15555,content:""},
   
 ]
-localStorage.setItem('user',JSON.stringify(userdata))
+//localStorage.setItem('user',JSON.stringify(userdata))
 
 // localStorage.setItem('user',JSON.stringify(notes));
 
