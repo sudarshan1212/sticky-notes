@@ -1,2 +1,2 @@
-                                                                   SITE=>sudarshan-stickynotes.netlify.app
-sudarshan-stickynotes.netlify.app
+                                                                  sudarshan-stickynotes.netlify.app
+ SITE=> sudarshan-stickynotes.netlify.app
