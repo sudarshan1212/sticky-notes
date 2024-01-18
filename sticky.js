@@ -6,13 +6,12 @@ let userdata=[
     {id:15555,content:""},
   
 ]
-// localStorage.setItem('user',JSON.stringify(userdata))
+localStorage.setItem('user',JSON.stringify(userdata))
 
-function data(){        
- return JSON.parse(localStorage.getItem('user')|| "{}")
-}
+// localStorage.setItem('user',JSON.stringify(notes));
 
 data().forEach(element=>{
+
     const textElement=createTextElement(element.id,element.content);
     containerElement.insertBefore(textElement,btnAdd);
 
@@ -38,6 +37,7 @@ function  createTextElement(id,content){
 }
 
 function stickyadd(){
+
     const notes=data();
     const notesobject={
         id:Math.floor(Math.random()*100000),
@@ -46,6 +46,8 @@ function stickyadd(){
     const element=createTextElement(notesobject.id,notesobject.content)
     containerElement.insertBefore(element,btnAdd)
     notes.push(notesobject)
+   
+    // localStorage.setItem('user',JSON.stringify(notes));
     save(notes)
    
     
@@ -63,6 +65,7 @@ function updateNote(id,content){
     const notes=data();
     const updateElement=notes.filter((note)=>note.id==id)[0];
     updateElement.content=content;
+    localStorage.setItem('user',JSON.stringify(userdata))
     save(notes)
 }
 
@@ -72,7 +75,11 @@ function deletenotes(id,textElement){
    containerElement.removeChild(textElement)
 
 }
+function data(){        
+    return JSON.parse(localStorage.getItem('user')|| "{}")
 
+   }
+   
 
 
 
